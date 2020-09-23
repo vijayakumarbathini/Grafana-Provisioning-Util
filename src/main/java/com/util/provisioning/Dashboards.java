@@ -1,23 +1,29 @@
 package com.util.provisioning;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Dashboards {
 
-	public static void main(String[] args) {
-		System.out.println("apiVersion: 1");
-		System.out.println("");
-		System.out.println("providers:");
-		System.out.println("");
-		for (int i = 1; i <= 900; i++) {
-			System.out.println("- name: 'tenant" + i + "'");
-			System.out.println("  orgId: " + i);
-			System.out.println("  folder: ''");
-			System.out.println("  type: file");
-			System.out.println("  disableDeletion: false");
-			System.out.println("  editable: true");
-			System.out.println("  updateIntervalSeconds: 604800");
-			System.out.println("  options:");
-			System.out.println("    path: /etc/grafana/dashboards");
-			System.out.println("");
+	private static final Logger log = LoggerFactory.getLogger(Dashboards.class);
+
+	public void getDashboards(String path, int count) {
+
+		log.info("apiVersion: 1");
+		log.info("");
+		log.info("providers:");
+		log.info("");
+		for (int i = 1; i <= count; i++) {
+			log.info("- name: 'tenant" + i + "'");
+			log.info("  orgId: " + i);
+			log.info("  folder: ''");
+			log.info("  type: file");
+			log.info("  disableDeletion: false");
+			log.info("  editable: true");
+			log.info("  updateIntervalSeconds: 604800");
+			log.info("  options:");
+			log.info(path);
+			log.info("");
 		}
 	}
 }
