@@ -1,3 +1,4 @@
-#Grafana Provisioning Util
+## Grafana Provisioning Util
 
-Utility to create dashboards and datasources for grafana provisioning
+Utility to create multiple dashboards and datasources which can be used for grafana provisioning
+

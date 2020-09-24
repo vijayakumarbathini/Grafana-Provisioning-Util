@@ -11,7 +11,7 @@ public class Datasources {
 	private static final Logger log = LoggerFactory.getLogger(Datasources.class);
 	public void getDataSources(Map<String, String> datasourcesMap) {
 
-		log.info("apiVersion: 2");
+		log.info("apiVersion:  2");
 		log.info("");
 		log.info("datasources:");
 		IntStream.range(1, 10).forEach(index -> {
